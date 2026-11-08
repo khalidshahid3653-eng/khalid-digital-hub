@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Khalid Digital Hub offers Canva graphic design, professional CV and resume writing, website development, and content writing. Contact us on WhatsApp for a quote.">
+  <meta name="theme-color" content="#071b16">
+  <title>Khalid Digital Hub | Digital Services</title>
+  <style>
+    :root {
+      --bg: #071b16;
+      --bg2: #0b241d;
+      --panel: #102d24;
+      --panel2: #14382c;
+      --text: #f3f8f4;
+      --muted: #b4c9bd;
+      --green: #5ee0a0;
+      --green-dark: #123f2d;
+      --line: rgba(210, 240, 222, .14);
+      --shadow: 0 18px 50px rgba(0,0,0,.25);
+      --radius: 22px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at 85% 5%, rgba(48,143,93,.18), transparent 28%), var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, calc(100% - 40px)); margin: auto; }
+    .nav-wrap {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(7,27,22,.9); backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .brand { display: flex; align-items: center; gap: 11px; font-weight: 850; letter-spacing: -.4px; }
+    .brand-mark {
+      width: 42px; height: 42px; border-radius: 13px; display: grid; place-items: center;
+      color: #062016; background: linear-gradient(135deg, #8bf0b8, #35bd7b); font-weight: 950;
+      box-shadow: 0 8px 25px rgba(63,207,133,.2);
+    }
+    .brand small { display: block; color: var(--muted); font-size: 10px; letter-spacing: 1.8px; font-weight: 700; }
+    .nav-links { display: flex; align-items: center; gap: 25px; color: var(--muted); font-size: 14px; }
+    .nav-links a:hover { color: var(--green); }
+    .btn {
+      display: inline-flex; justify-content: center; align-items: center; gap: 9px;
+      border: 1px solid transparent; border-radius: 999px; padding: 12px 19px;
+      font-weight: 750; font-size: 14px; transition: .2s ease; cursor: pointer;
+    }
+    .btn-primary { background: var(--green); color: #062016; }
+    .btn-primary:hover { background: #82edb3; transform: translateY(-2px); }
+    .btn-outline { border-color: rgba(190,230,204,.3); color: var(--text); background: rgba(255,255,255,.025); }
+    .btn-outline:hover { border-color: var(--green); color: var(--green); }
+    .hero { padding: 86px 0 72px; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.12fr .88fr; gap: 48px; align-items: center; }
+    .eyebrow {
+      display: inline-flex; gap: 8px; align-items: center; padding: 7px 12px;
+      border: 1px solid rgba(94,224,160,.28); border-radius: 999px;
+      color: var(--green); background: rgba(94,224,160,.07); font-size: 12px; font-weight: 750;
+      letter-spacing: .7px; text-transform: uppercase;
+    }
+    h1 { font-size: clamp(42px, 6vw, 68px); line-height: 1.06; letter-spacing: -2.8px; margin: 20px 0; }
+    h1 span { color: var(--green); }
+    .hero p { max-width: 610px; color: var(--muted); font-size: 17px; margin: 0 0 27px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .trust-line { margin-top: 24px; color: #9eb8a9; font-size: 12px; }
+    .visual {
+      min-height: 390px; position: relative; display: grid; place-items: center;
+      border: 1px solid var(--line); border-radius: 30px; overflow: hidden;
+      background: linear-gradient(145deg, rgba(94,224,160,.12), rgba(255,255,255,.025));
+      box-shadow: var(--shadow);
+    }
+    .visual:before, .visual:after { content: ""; position: absolute; border-radius: 50%; filter: blur(1px); }
+    .visual:before { width: 260px; height: 260px; background: rgba(65,198,129,.15); top: -80px; right: -70px; }
+    .visual:after { width: 210px; height: 210px; background: rgba(65,198,129,.1); bottom: -90px; left: -55px; }
+    .dashboard {
+      width: min(86%, 390px); position: relative; z-index: 1; padding: 22px;
+      border: 1px solid rgba(213,245,225,.2); border-radius: 22px;
+      background: rgba(8,31,24,.88); box-shadow: 0 25px 70px rgba(0,0,0,.35);
+      transform: rotate(-3deg);
+    }
+    .dash-top { display: flex; justify-content: space-between; color: var(--muted); font-size: 11px; }
+    .dash-title { font-size: 23px; font-weight: 850; margin: 18px 0 5px; }
+    .dash-sub { color: var(--muted); font-size: 12px; margin-bottom: 18px; }
+    .dash-card { padding: 14px; border-radius: 14px; background: var(--panel); margin-top: 10px; display: flex; gap: 12px; align-items: center; }
+    .dash-icon { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 11px; background: rgba(94,224,160,.13); color: var(--green); font-size: 19px; }
+    .dash-card b { display: block; font-size: 13px; }
+    .dash-card small { color: var(--muted); font-size: 11px; }
+    section { padding: 70px 0; }
+    .section-head { max-width: 650px; margin-bottom: 30px; }
+    .section-kicker { color: var(--green); text-transform: uppercase; letter-spacing: 1.8px; font-size: 11px; font-weight: 850; }
+    h2 { margin: 8px 0 10px; font-size: clamp(29px, 4vw, 42px); line-height: 1.15; letter-spacing: -1.3px; }
+    .section-head p { color: var(--muted); margin: 0; }
+    .services { display: grid; grid-template-columns: repeat(2, 1fr); gap: 17px; }
+    .service {
+      padding: 25px; border-radius: var(--radius); border: 1px solid var(--line);
+      background: linear-gradient(145deg, rgba(20,56,44,.8), rgba(13,39,30,.85));
+      transition: .2s ease;
+    }
+    .service:hover { transform: translateY(-4px); border-color: rgba(94,224,160,.4); }
+    .service-icon { font-size: 25px; width: 52px; height: 52px; display: grid; place-items: center; border-radius: 16px; background: rgba(94,224,160,.1); }
+    .service h3 { margin: 17px 0 7px; font-size: 19px; }
+    .service p { margin: 0 0 16px; color: var(--muted); font-size: 14px; }
+    .service a { color: var(--green); font-weight: 750; font-size: 13px; }
+    .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .step { padding: 23px; border-radius: 18px; background: rgba(255,255,255,.035); border: 1px solid var(--line); }
+    .step-num { color: var(--green); font-size: 12px; font-weight: 900; letter-spacing: 1px; }
+    .step h3 { margin: 9px 0 6px; font-size: 17px; }
+    .step p { color: var(--muted); font-size: 13px; margin: 0; }
+    .about-box {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center;
+      padding: 34px; border: 1px solid var(--line); border-radius: 26px;
+      background: linear-gradient(120deg, rgba(94,224,160,.09), rgba(255,255,255,.02));
+    }
+    .about-box p { color: var(--muted); margin-bottom: 0; }
+    .values { display: grid; gap: 12px; }
+    .value { display: flex; align-items: center; gap: 12px; color: #d9e9df; font-size: 14px; }
+    .check { color: var(--green); font-weight: 900; }
+    .cta {
+      text-align: center; padding: 48px 25px; border-radius: 28px;
+      background: linear-gradient(135deg, #174a34, #0e3024); border: 1px solid rgba(94,224,160,.25);
+    }
+    .cta p { color: #c1d8ca; max-width: 570px; margin: 10px auto 23px; }
+    footer { border-top: 1px solid var(--line); padding: 25px 0; color: #9eb8a9; font-size: 12px; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
+    .float-wa {
+      position: fixed; right: 19px; bottom: 19px; z-index: 30; width: 58px; height: 58px;
+      display: grid; place-items: center; border-radius: 50%; background: #25D366; color: #062016;
+      font-size: 27px; box-shadow: 0 10px 30px rgba(0,0,0,.35); border: 2px solid rgba(255,255,255,.25);
+    }
+    .float-wa:hover { transform: translateY(-3px); }
+    @media (max-width: 760px) {
+      .container { width: min(100% - 30px, 600px); }
+      .nav-links { display: none; }
+      nav { min-height: 65px; }
+      .nav-cta { padding: 10px 13px; font-size: 12px; }
+      .hero { padding: 58px 0 45px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+      .visual { min-height: 330px; }
+      .services { grid-template-columns: 1fr; }
+      .how-grid { grid-template-columns: 1fr; }
+      .about-box { grid-template-columns: 1fr; padding: 25px; }
+      section { padding: 52px 0; }
+      h1 { letter-spacing: -1.8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-wrap">
+    <div class="container">
+      <nav aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Khalid Digital Hub home">
+          <span class="brand-mark">KD</span>
+          <span>KHALID DIGITAL HUB<small>LEARN · CREATE · GROW</small></span>
+        </a>
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#how">How it works</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <a class="btn btn-primary nav-cta" href="https://wa.me/923137710108?text=Hello%20Khalid%20Digital%20Hub%2C%20I%20want%20to%20discuss%20a%20service." target="_blank" rel="noopener">WhatsApp Us ↗</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <header class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">✦ Your digital work partner</span>
+          <h1>Good ideas deserve a <span>great digital</span> presence.</h1>
+          <p>Practical digital services for students, creators, and small businesses. Tell us what you need, and let's discuss a solution that fits your goal and budget.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/923137710108?text=Hello%2C%20I%20want%20to%20get%20a%20quote%20for%20your%20digital%20services." target="_blank" rel="noopener">Get a free quote ↗</a>
+            <a class="btn btn-outline" href="#services">Explore services ↓</a>
+          </div>
+          <div class="trust-line">Clear communication · Work agreed before starting · WhatsApp support</div>
+        </div>
+        <div class="visual" aria-label="Illustration of digital services dashboard">
+          <div class="dashboard">
+            <div class="dash-top"><span>KD / DIGITAL HUB</span><span>✦ ONLINE</span></div>
+            <div class="dash-title">Build your next idea.</div>
+            <div class="dash-sub">Digital services, made simple.</div>
+            <div class="dash-card"><span class="dash-icon">✎</span><span><b>Graphic Design</b><small>Posts, banners & thumbnails</small></span></div>
+            <div class="dash-card"><span class="dash-icon">▤</span><span><b>CV & Resume</b><small>Clean, professional documents</small></span></div>
+            <div class="dash-card"><span class="dash-icon">⌘</span><span><b>Web Development</b><small>Mobile-friendly websites</small></span></div>
+            <div class="dash-card"><span class="dash-icon">✍</span><span><b>Content Writing</b><small>Useful, clear written content</small></span></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">What we can help with</div>
+          <h2>Digital services for your next step.</h2>
+          <p>Choose a service to start a WhatsApp conversation. We'll confirm the requirements, delivery time, and price before beginning.</p>
+        </div>
+        <div class="services">
+          <article class="service">
+            <div class="service-icon">🎨</div>
+            <h3>Canva Graphic Design</h3>
+            <p>Social media posts, promotional flyers, banners, thumbnails, and simple branded designs.</p>
+            <a href="https://wa.me/923137710108?text=Hello%2C%20I%20am%20interested%20in%20Canva%20graphic%20design.%20Please%20share%20the%20details." target="_blank" rel="noopener">Ask about graphic design ↗</a>
+          </article>
+          <article class="service">
+            <div class="service-icon">📄</div>
+            <h3>CV & Resume Writing</h3>
+            <p>Neat CV formatting and resume writing support based on the real information you provide.</p>
+            <a href="https://wa.me/923137710108?text=Hello%2C%20I%20need%20help%20with%20a%20CV%20or%20resume.%20Please%20share%20the%20details." target="_blank" rel="noopener">Ask about CV services ↗</a>
+          </article>
+          <article class="service">
+            <div class="service-icon">💻</div>
+            <h3>Website Development</h3>
+            <p>Simple, responsive websites and landing pages for personal projects and small businesses.</p>
+            <a href="https://wa.me/923137710108?text=Hello%2C%20I%20need%20a%20website%20or%20landing%20page.%20Please%20contact%20me." target="_blank" rel="noopener">Ask about websites ↗</a>
+          </article>
+          <article class="service">
+            <div class="service-icon">✍️</div>
+            <h3>Content Writing</h3>
+            <p>Short business descriptions, social media captions, product descriptions, and basic web content.</p>
+            <a href="https://wa.me/923137710108?text=Hello%2C%20I%20am%20interested%20in%20content%20writing.%20Please%20share%20the%20details." target="_blank" rel="noopener">Ask about writing ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">Simple process</div>
+          <h2>How ordering works.</h2>
+          <p>No complicated checkout. Discuss your project directly on WhatsApp.</p>
+        </div>
+        <div class="how-grid">
+          <article class="step"><div class="step-num">STEP 01</div><h3>Tell us your requirement</h3><p>Send a message describing the service, your goal, and any reference files or examples.</p></article>
+          <article class="step"><div class="step-num">STEP 02</div><h3>Confirm scope and price</h3><p>We discuss what is included, the delivery timeline, revisions, and agreed price before work starts.</p></article>
+          <article class="step"><div class="step-num">STEP 03</div><h3>Review your work</h3><p>Review the agreed deliverable and share feedback. Final delivery follows the agreed terms.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="about-box">
+          <div>
+            <div class="section-kicker">About Khalid Digital Hub</div>
+            <h2>Small steps. Useful digital work.</h2>
+            <p>Khalid Digital Hub is an emerging digital services initiative focused on helping people and small businesses with practical design, document, website, and content needs. Every project starts with a clear conversation about what is needed.</p>
+          </div>
+          <div class="values">
+            <div class="value"><span class="check">✓</span> Friendly, direct communication</div>
+            <div class="value"><span class="check">✓</span> Clear scope and agreed pricing</div>
+            <div class="value"><span class="check">✓</span> Mobile-friendly website approach</div>
+            <div class="value"><span class="check">✓</span> No fake testimonials or unrealistic promises</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="cta">
+          <div class="section-kicker">Let's talk about your project</div>
+          <h2>Ready to get started?</h2>
+          <p>Message Khalid Digital Hub on WhatsApp. Share what you need, and we'll discuss the next step.</p>
+          <a class="btn btn-primary" href="https://wa.me/923137710108?text=Hello%20Khalid%20Digital%20Hub%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Khalid Digital Hub. All rights reserved.</span>
+      <span>Digital services · Pakistan</span>
+    </div>
+  </footer>
+
+  <a class="float-wa" href="https://wa.me/923137710108?text=Hello%20Khalid%20Digital%20Hub%2C%20I%20have%20a%20question." target="_blank" rel="noopener" aria-label="Chat with Khalid Digital Hub on WhatsApp">✆</a>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
